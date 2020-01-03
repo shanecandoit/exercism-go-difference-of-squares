@@ -15,20 +15,21 @@ Difference(5)   = 170
 // SquareOfSum sums then square
 func SquareOfSum(n int) (sqr int) {
 
-	sum := 0
-	for i := 0; i <= n; i++ {
-		sum += i
-	}
+	sum := n * (n + 1) / 2 // gauss
+	// for i := 0; i <= n; i++ {sum += i}
+
 	sqr = sum * sum
 	return sqr
 }
 
 // SumOfSquares squares then sum
 func SumOfSquares(n int) (sum int) {
-	sum = 0
-	for i := 0; i <= n; i++ {
-		sum += i * i
-	}
+	sum = (n * (n + 1) * (2*n + 1)) / 6
+	// https://mathschallenge.net/library/number/sum_of_squares
+	// for i := 0; i <= n; i++ {
+	//	sum += i * i
+	// }
+
 	return sum
 }
 
